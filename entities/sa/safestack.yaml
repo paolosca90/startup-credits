@@ -39,9 +39,8 @@ offers:
       effective_from: 2026-08-25T20:36:10.765Z
     economics:
       benefits:
-        - applies_to: SafeStack team plan
-          benefit_id: ben_01
-          description: 50% off the SafeStack team plan for the first 12 months
+        - benefit_id: ben_01
+          description: 50% off the SafeStack team plan for the first 12 months.
           duration:
             kind: exact
             value: P1Y
@@ -51,7 +50,7 @@ offers:
             kind: exact
       consideration:
         kind: variable
-        description: The approved company pays the remaining 50% of the SafeStack team plan price for its first 12 months.
+        description: The startup receives 50% off the SafeStack team plan for the first 12 months.
     eligibility:
       rule:
         kind: all
@@ -80,10 +79,6 @@ offers:
             kind: manual
             reason: external-verification
             statement: The company is pre-Series A.
-          - criterion_id: cri_05
-            kind: manual
-            reason: vendor-discretion
-            statement: The SafeStack team reviews each application within 3 business days.
     roles:
       terms_authority_entity_id: ent_01m0xa6ecdzf91x073s4bdp79f
       access_operator_entity_id: ent_01m0xa6ecdzf91x073s4bdp79f
