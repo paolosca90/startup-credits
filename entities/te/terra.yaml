@@ -39,11 +39,10 @@ offers:
       effective_from: 2026-08-25T00:00:00.000Z
     economics:
       consideration:
-        kind: variable
-        description: Applying is free and Terra takes no equity. A card is required to activate; nothing is charged while the credit covers invoices, and billing continues on the activated plan when the credit ends.
+        kind: none
       benefits:
         - benefit_id: ben_01
-          description: Up to $100,000 in Terra API credits over up to six months, applied to monthly Terra invoices
+          description: Up to $100,000 in Terra API credits over up to six months.
           kind: credit
           value:
             amount:
@@ -54,9 +53,8 @@ offers:
             kind: up-to
             value: P6M
         - benefit_id: ben_02
-          description: A named account manager and hands-on integration support
-          kind: free-service
-          service: Account management and integration support
+          description: A named account manager and hands-on integration support.
+          kind: other
     eligibility:
       rule:
         kind: all
