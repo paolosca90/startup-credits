@@ -40,7 +40,7 @@ offers:
     economics:
       benefits:
         - benefit_id: ben_01
-          description: A $150 PulseADT credit usable on any part of the platform, valid for 12 months and expiring if unused
+          description: A $150 credit, valid for 12 months and expiring if unused.
           duration:
             kind: exact
             value: P1Y
@@ -52,39 +52,13 @@ offers:
             kind: exact
       consideration:
         kind: variable
-        description: The startup must spend at least $50 on PulseADT API credits within its first 90 days; no subscription is required for this track.
+        description: Spend $50 or more on PulseADT API credits within your first 90 days; no subscription is required.
     eligibility:
       rule:
-        kind: all
-        rules:
-          - criterion_id: cri_01
-            fact: company.age_months
-            kind: predicate
-            operator: lt
-            statement: The company was founded within the last 3 years.
-            value:
-              type: number
-              value: 36
-          - criterion_id: cri_02
-            fact: company.employee_count
-            kind: predicate
-            operator: lt
-            statement: The company has fewer than 50 employees.
-            value:
-              type: number
-              value: 50
-          - criterion_id: cri_03
-            kind: manual
-            reason: external-verification
-            statement: The company is pre-revenue or has less than $500K ARR.
-          - criterion_id: cri_04
-            kind: manual
-            reason: not-machine-evaluable
-            statement: The company builds a technology product and is not a subsidiary or division of a larger company.
-          - criterion_id: cri_05
-            kind: manual
-            reason: external-verification
-            statement: The company has spent at least $50 on PulseADT API credits within its first 90 days, which PulseADT verifies before applying the credit.
+        kind: manual
+        criterion_id: cri_01
+        reason: external-verification
+        statement: Founded within the last 3 years, fewer than 50 employees, pre-revenue or less than $500K ARR, building a technology product (fintech, healthtech, devtools, SaaS, or similar), and not a subsidiary or division of a larger company.
     roles:
       terms_authority_entity_id: ent_01m0xampvw3k46hhttwq5w1z4t
       access_operator_entity_id: ent_01m0xampvw3k46hhttwq5w1z4t
