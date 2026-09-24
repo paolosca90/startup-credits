@@ -10,18 +10,21 @@ entity:
       valid_from: 2026-08-25T20:31:11.391Z
   category: devtools-other
 profile:
-  description: Zencoder provides AI coding agents and workflow automation for software development teams.
+  summary: Zencoder makes AI coding agents that plan, build, test, and review code across a codebase from a desktop app, the IDE, or a CI/CD pipeline.
+  description: Zencoder, operated by For Good AI Inc., builds AI agents and orchestration tools for planning, coding, testing, and code review using multiple frontier models.
   links:
     site: https://zencoder.ai
 sources:
   - source_id: src_68570d70717d7edf78075e8f8296d3c10aeb8e04c4ad192358d526de585f9dd5
     url: https://zencoder.ai/legal/zencoder-startup-program-terms-and-conditions
+  - source_id: src_44545d4a3c77eae699c295b62fe6d42ebabda47a2183c0593bddcdd379e83d97
+    url: https://zencoder.ai/
 programs:
   - program_id: prg_01m0x9wjpw4g7fw1etzh0ph5rv
     program_slug: zencoder-for-startups
     program_slug_aliases: []
     title: Zencoder for Startups
-    summary: Zencoder offers qualifying early-stage companies discounted annual subscriptions for three consecutive years.
+    summary: The Zencoder for Startups program gives eligible early-stage companies discounted annual Core, Advanced, or Max subscriptions for three consecutive years.
     source_ids:
       - src_68570d70717d7edf78075e8f8296d3c10aeb8e04c4ad192358d526de585f9dd5
 offers:
@@ -30,7 +33,7 @@ offers:
     offer_slug: forty-thirty-twenty-percent-three-year-discount
     offer_slug_aliases: []
     title: 40% off year one, 30% off year two, and 20% off year three
-    summary: Approved startups receive 40% off an eligible Zencoder plan in year one, 30% off in year two, and 20% off in year three.
+    summary: Accepted startups with 25 or fewer employees at pre-seed to Series A receive 40%, 30%, and 20% off annual Zencoder Core, Advanced, or Max plans in years one, two, and three.
     lifecycle:
       status: active
       effective_from: 2026-08-25T20:31:11.391Z
@@ -38,7 +41,7 @@ offers:
       benefits:
         - applies_to: Zencoder Core, Advanced, or Max annual subscriptions
           benefit_id: ben_01
-          description: 40% discount in the first year
+          description: 40% off the selected plan in the first year
           duration:
             kind: exact
             value: P1Y
@@ -48,7 +51,7 @@ offers:
             kind: exact
         - applies_to: Zencoder Core, Advanced, or Max annual subscriptions
           benefit_id: ben_02
-          description: 30% discount in the second year
+          description: 30% off the selected plan in the second year
           duration:
             kind: exact
             value: P1Y
@@ -58,7 +61,7 @@ offers:
             kind: exact
         - applies_to: Zencoder Core, Advanced, or Max annual subscriptions
           benefit_id: ben_03
-          description: 20% discount in the third year
+          description: 20% off the selected plan in the third year
           duration:
             kind: exact
             value: P1Y
@@ -68,13 +71,31 @@ offers:
             kind: exact
       consideration:
         kind: variable
-        description: An annual paid Core, Advanced, or Max subscription is required after approval, at the remaining discounted price.
+        description: The program requires an annual subscription commitment at the discounted price, for example Core at $29.40, $34.30, and $39.20 per user per month in years one to three; standard pricing applies after year three.
     eligibility:
       rule:
-        criterion_id: cri_01
-        kind: manual
-        reason: external-verification
-        statement: Applicant must have no more than 25 full-time employees; be at Pre-seed, Seed, or Series A stage, or be bootstrapped and less than three years old with equivalent early-stage characteristics; apply once with a business-domain email; and pass Zencoder review. Existing Enterprise customers, agencies, consultancies, resellers applying for clients, previous participants and related entities are excluded.
+        kind: all
+        rules:
+          - criterion_id: cri_01
+            fact: company.employee_count
+            kind: predicate
+            operator: lte
+            statement: The applicant has 25 or fewer full-time employees.
+            value:
+              type: number
+              value: 25
+          - criterion_id: cri_02
+            kind: manual
+            reason: external-verification
+            statement: The applicant is at pre-seed, seed, or Series A stage, or is bootstrapped, in operation for less than 3 years, with equivalent early-stage characteristics.
+          - criterion_id: cri_03
+            kind: manual
+            reason: external-verification
+            statement: The applicant applies once with a business-domain email; existing Enterprise customers, agencies, consultancies, resellers applying for clients, and previous participants or their affiliates are not eligible.
+          - criterion_id: cri_04
+            kind: manual
+            reason: vendor-discretion
+            statement: Zencoder reviews every application and may accept or reject it at its discretion.
     roles:
       terms_authority_entity_id: ent_01m0x9wjpwz9qsqt9mc88s51hp
       access_operator_entity_id: ent_01m0x9wjpwz9qsqt9mc88s51hp
@@ -82,6 +103,7 @@ offers:
       availability: public
       method: contact
       url: https://zencoder.ai/legal/zencoder-startup-program-terms-and-conditions
-      instructions: Contact Zencoder using the startup-program address published in the program terms, request the official application form, and submit it with a business-domain email.
+      instructions: The program terms require Zencoder's official application form, completed with a business-domain email, and name a startups contact address for program and eligibility questions.
+    terms_url: https://zencoder.ai/legal/zencoder-startup-program-terms-and-conditions
     source_ids:
       - src_68570d70717d7edf78075e8f8296d3c10aeb8e04c4ad192358d526de585f9dd5
